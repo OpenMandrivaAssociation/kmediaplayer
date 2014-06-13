@@ -5,7 +5,7 @@
 
 Name: kmediaplayer
 Version: 4.99.0
-Release: 1
+Release: 2
 Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/portingAids/%{version}/%{name}-%{version}.tar.xz
 Summary: Plugin interface for media player features
 URL: http://kde.org/
