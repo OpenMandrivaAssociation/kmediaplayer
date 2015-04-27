@@ -12,9 +12,6 @@ Summary: Plugin interface for media player features
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
-BuildRequires: cmake
-BuildRequires: qmake5
-BuildRequires: extra-cmake-modules5
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5DBus)
 BuildRequires: pkgconfig(Qt5Gui)
@@ -24,7 +21,6 @@ BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(KF5Parts)
 BuildRequires: cmake(KF5XmlGui)
-BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
 %description
@@ -48,14 +44,13 @@ Development files for the KDE Frameworks 5 Mediaplayer library.
 
 %prep
 %setup -q
-%cmake -G Ninja \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+%cmake_kde5
 
 %build
-ninja -C build
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
+%ninja_install -C build
 
 %files
 %{_datadir}/dbus-1/*/*
