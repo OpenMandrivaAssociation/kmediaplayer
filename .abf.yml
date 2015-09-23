@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kmediaplayer-5.13.0.tar.xz: 90f4a740c4fd577cc6d7ec69c80b352a32292a9b
+sources:
+  kmediaplayer-5.14.0.tar.xz: 7280350e2aea095a3c5f40f4d87b13cdb86125f4
